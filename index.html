@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manajemen Data Booking</h1>
+        <table id="bookingTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Layanan</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="bookingList">
+                <!-- Data booking akan dimasukkan di sini oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal untuk Edit Booking -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Booking</h2>
+            <input type="hidden" id="editBookingId">
+            <label for="editName">Nama:</label>
+            <input type="text" id="editName">
+            <label for="editDate">Tanggal:</label>
+            <input type="date" id="editDate">
+            <label for="editService">Layanan:</label>
+            <input type="text" id="editService">
+            <label for="editStatus">Status:</label>
+            <select id="editStatus">
+                <option value="Booked">Booked</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+            <button id="saveEdit">Simpan Perubahan</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
